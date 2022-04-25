@@ -1,0 +1,61 @@
+mat-toolbar {
+    border-radius: 5px;
+}
+
+#borna {
+    font-size: 1.2em;
+    margin-left: 15px;
+}
+
+* {
+  padding:0;
+  margin:0;
+}
+
+body {
+  position : absolute;
+  background-color : #ccdcfc;
+  background-repeat: no-repeat;
+  padding-bottom: 500px;
+  width: 100%;
+}
+
+mat-card {
+    position: relative;
+    border-radius: 5px;
+    top : 250px;
+    margin-left: 550px;
+    margin-right : 550px;
+    padding-top: 270px;
+    padding-bottom: 35px;
+}
+
+mat-card-subtitle {
+    position: relative;
+    top:-220px;
+    font-size: 2em;
+    color: black;
+    text-align: center;
+}
+
+img {
+  position: absolute;
+  top: 80px;
+  right: 170px;
+}
+
+.mail {
+  top : -110px;
+  margin-left: 100px;
+}
+
+.mdp {
+  top : -100px;
+  margin-left: 100px ;
+}
+
+button {
+  top : -80px;
+  margin-left:130px;
+  padding : 3px 10px 3px 10px;
+}

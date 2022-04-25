@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Calendrier</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form class="form" [formGroup]="eventForm" (ngSubmit)="ajouterEvent()">
+      <header>
+        <mat-toolbar color = "primary">
+      	  <span id= "borna" routerLink="/">Borna</span>
+	   </mat-toolbar>
+      </header>
+      <p><label class='calendrier'>
+        <input type='checkbox' [checked]='calendarVisible' (change)='handleCalendarToggle()'>Afficher le calendrier
+      </label></p>
+      <p><label class='we'>
+      <input type='checkbox' [checked]='calendarOptions.weekends' (change)='handleWeekendsToggle()'>Masquer les weekends
+      </label></p>
+      <mat-form-field appearance="outline" class="titre">
+        <mat-label for="titre">Titre</mat-label>
+        <input matInput type="text" id="titre" maxlength="20" name="titre" size="25" placeholder="Ex. sport" required="" formControlName="title">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="start">
+        <mat-label for="start">Début date</mat-label>
+        <input matInput type="datetime-local" id="start" name="start" size="25" required="" formControlName="start">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="end">
+        <mat-label for="end">Fin date</mat-label>
+        <input matInput type="datetime-local" id="end" name="end" size="25" required="" formControlName="end">
+      </mat-form-field>
+      <button mat-raised-button color="accent">Créer l'évènement</button>
+      <mat-card>
+	<mat-card-subtitle>Mon calendrier :</mat-card-subtitle>
+        <full-calendar id="calendar" *ngIf='calendarVisible' [options]='calendarOptions'></full-calendar>
+     	<mat-card-content>
+          <p>Voici la liste des rendez-vous: </p>
+          <table mat-table [dataSource]="dataSource" class="rdv">
+            <ng-container matColumnDef="nom">
+              <th mat-header-cell *matHeaderCellDef> Nom  </th>
+              <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+            </ng-container>
+            <ng-container matColumnDef="prenom">
+              <th mat-header-cell *matHeaderCellDef> Prenom  </th>
+              <td mat-cell *matCellDef="let element"> {{element.prenom}} </td>
+            </ng-container>
+            <ng-container matColumnDef="mail">
+              <th mat-header-cell *matHeaderCellDef> Mail </th>
+              <td mat-cell *matCellDef="let element"> {{element.mail}} </td>
+            </ng-container>
+            <ng-container matColumnDef="start">
+              <th mat-header-cell *matHeaderCellDef> Heure du rendez-vous</th>
+              <td mat-cell *matCellDef="let element"> {{element.start}} </td>
+            </ng-container>
+            <ng-container matColumnDef="end">
+              <th mat-header-cell *matHeaderCellDef> Fin du rendez-vous</th>
+              <td mat-cell *matCellDef="let element"> {{element.end}} </td>
+            </ng-container>
+            <ng-container matColumnDef="motif">
+              <th mat-header-cell *matHeaderCellDef> Motif </th>
+              <td mat-cell *matCellDef="let element"> {{element.motif}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </form>
+  </body>
+</html>

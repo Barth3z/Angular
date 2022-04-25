@@ -1,0 +1,83 @@
+mat-toolbar {
+  border-radius: 5px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #ccdcfc;
+  padding-bottom: 810px;
+  position: absolute;
+  width: 100%;
+}
+
+#borna {
+  font-size: 1.2em;
+}
+
+mat-card {
+  margin-top: 25px;
+}
+
+mat-card-subtitle {
+  font-size: 1.9em;
+  color: black;
+  padding-top: 25px;
+}
+
+#calendar {
+  width: 70%;
+  position: relative;
+  left: 230px;
+  top: 35px;
+}
+
+.calendrier {
+  position: absolute;
+  right: 50px;
+  top: 80px;
+}
+
+.we {
+  position: absolute;
+  right: 35px;
+  top:110px;
+}
+
+.titre {
+    width: 150px;
+    margin-left: 35px;
+    margin-top: 25px;
+}
+
+.start {
+  width: 150px;
+  margin-left: 15px;
+}
+
+.end {
+  width: 150px;
+  margin-left: 15px;
+}
+
+button {
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 0.75em;
+  margin-left: 15px;
+}
+
+mat-card-content p {
+  font-size: 1.9em;
+  margin-top: 90px;
+}
+
+.rdv {
+  width: 100%;
+  margin-top: 35px;
+}

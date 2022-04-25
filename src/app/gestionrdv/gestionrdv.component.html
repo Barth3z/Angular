@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes rendez-vous</title>
+  </head>
+  <body>
+    <header><mat-toolbar color = "primary">
+      <span id= "borna" routerLink="/">Borna</span>
+      <mat-icon id="mon_compte" aria-hidden="false" aria-label="Example home icon">people</mat-icon>
+    </mat-toolbar></header>
+    <mat-card>
+      <p class="instruction">Vous êtes actuellement sur la page "Mes rendez-vous". Afin de consulter, modifier ou supprimer vos rendez-vous, veuillez entrer le mail utilisé pour prendre vos rendez-vous ci-dessous :</p>
+      <p><mat-form-field appearence="outline" class ="mail">
+        <mat-icon matPrefix>perm_identity</mat-icon>
+        <mat-label for ="mail">Mail :</mat-label>
+        <input matInput id="mail" type="email" maxlength="30" name="mail" size="25" placeholder="jean@gmail.com" required="" [(ngModel)]="mail">
+      </mat-form-field></p>
+      <a routerLink='/prise-de-rendez-vous'>Prendre d'autre rendez-vous</a>
+      <button mat-raised-button color="accent" (click)="getRdvs()">Confirmer</button>
+      <table mat-table [dataSource]="dataSource" class="tab">
+      <!--- Note that these columns can be defined in any order.
+      The actual rendered columns are set as a property on the row definition" -->
+      <ng-container matColumnDef="nom">
+        <th mat-header-cell *matHeaderCellDef> Nom  </th>
+        <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+      </ng-container>
+      <ng-container matColumnDef="prenom">
+        <th mat-header-cell *matHeaderCellDef> Prenom  </th>
+        <td mat-cell *matCellDef="let element"> {{element.prenom}} </td>
+      </ng-container>
+      <ng-container matColumnDef="mail">
+        <th mat-header-cell *matHeaderCellDef> Mail </th>
+        <td mat-cell *matCellDef="let element"> {{element.mail}} </td>
+      </ng-container>
+      <ng-container matColumnDef="start">
+        <th mat-header-cell *matHeaderCellDef> Heure du rendez-vous</th>
+        <td mat-cell *matCellDef="let element"> {{element.start}} </td>
+      </ng-container>
+      <ng-container matColumnDef="end">
+        <th mat-header-cell *matHeaderCellDef> Fin du rendez-vous</th>
+        <td mat-cell *matCellDef="let element"> {{element.end}} </td>
+      </ng-container>
+      <ng-container matColumnDef="motif">
+        <th mat-header-cell *matHeaderCellDef> Motif </th>
+        <td mat-cell *matCellDef="let element"> {{element.motif}} </td>
+      </ng-container>
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element" style="text-align: right;">
+          <a class="pointer" id="delete" matTooltip="Supprimer">
+            <mat-icon (click)="onDelete(element)">delete</mat-icon>
+          </a>
+          <a class="pointer" id="edit" matTooltip="Modifier">
+            <mat-icon (click)="onEdit(element)">edit</mat-icon>
+          </a>
+        </td>
+      </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table></mat-card>
+    </body>
+</html>

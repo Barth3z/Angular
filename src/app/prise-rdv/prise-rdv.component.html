@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Prise de rendez-vous</title>
+    </head>
+
+    <body>
+        <form class="form" [formGroup]="priseForm" (ngSubmit)="onSubmit()">
+        <header><mat-toolbar color = "primary">
+            <span id="borna" routerLink="/">Borna</span>
+            <mat-icon id="mon_compte" routerLink="/mes-rendez-vous" aria-hidden="false" aria-label="Example home icon">people</mat-icon>
+        </mat-toolbar> </header>
+        <p><mat-card>
+            <mat-card-subtitle>Entrez vos données personnelles pour prendre un rendez-vous : </mat-card-subtitle>
+            <p><mat-form-field appearance="outline" class="nom">
+                <mat-icon matPrefix>perm_identity</mat-icon>
+                <mat-label for="nom">Nom</mat-label>
+                <input matInput type="text" id="nom" size="25" name="nom" placeholder="Ex. Dupont" required="" autofocus="" maxlength="30" formControlName="nom">
+              </mat-form-field></p>
+	       <mat-card-content>
+                <p><mat-form-field appearance = "outline" class = "prenom">
+                    <mat-icon matPrefix>perm_identity</mat-icon>
+                    <mat-label for="prenom">Prénom</mat-label>
+                    <input matInput type="text" id="prenom" size="25" name="prenom" placeholder="Ex. Thomas" required="" autofocus="" maxlength="30" formControlName="prenom">
+                </mat-form-field></p>
+            </mat-card-content>
+            <p><mat-form-field appearance="outline" class ="mail">
+                <mat-icon matPrefix>email</mat-icon>
+                <mat-label for="mail">Email</mat-label>
+                <input matInput type ="email" id="mail" maxlength="30" name="mail" size="25" placeholder="Ex. Thomas.Rivoli@gmail.com" required="" formControlName="mail">
+            </mat-form-field></p>
+            <p><mat-form-field appearance = "outline" class="phone">
+                <mat-icon matPrefix>phone</mat-icon>
+                <mat-label for="phone">Numéro portable</mat-label>
+                <input matInput type="tel" id="phone" maxlength="10" name="phone" size="25" placeholder="Ex. 0684432321" required="" formControlName="phone">
+            </mat-form-field></p>
+            <p><mat-form-field appearance="fill" class = "motif">
+                <mat-label>Motif du rendez-vous : </mat-label>
+                <input matInput type="text" id="motif" maxlength="80" name="motif" placeholder="bonjour à tous" required="" formControlName="motif">
+            </mat-form-field></p>
+              <p><mat-form-field appearance="fill" class = "start">
+                 <mat-label>Saisissez le début de l'horaire choisie : </mat-label>
+                 <input matInput type="datetime-local" id="start" maxlength="80" name="start" placeholder="05-09-2022T10:30:00" required="" formControlName="start">
+              </mat-form-field></p>
+              <p><mat-form-field appearance="fill" class ="end">
+                 <mat-label>Saisissez la fin de l'horaire choisie : </mat-label>
+                 <input matInput type="datetime-local" id="end" maxlength="80" name="end" placeholder="05-09-2022T11:00:00" required="" formControlName="end">
+              </mat-form-field></p>
+            <mat-card class="calendrier">
+              <p>Veuillez sélectionner un horaire : </p>
+              <full-calendar #calendrier *ngIf='calendarVisible' showTime="true" [options]='calendarOptions' ></full-calendar>
+              <h2>Instruction :</h2>
+              <p>Pour prende un rendez-vous, choisissez un horaire qui vous convient.<p>
+              <p>Si <strong>l'horaire disparaît</strong> et devient <strong>vert</strong>, l'horaire est donc <strong>disponible</strong></p>
+              <p>Cependant, si vous cliquez et qu'un <strong>message apparait</strong> c'est que <strong>l'horaire est déjà pris.</strong></p>
+            </mat-card>
+            <button mat-fab color="primary"  id="done" (click)="onClick()">
+                <mat-icon>done</mat-icon>
+            </button>
+        </mat-card></p>
+      </form>
+    </body>
+</html>

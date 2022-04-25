@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Borna</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <mat-toolbar color="primary">
+      <span>Borna</span>
+      <span class="espace"></span> <!--En CSS => .espace { flex: 1 1 auto; }-->
+      <span id="prendre-rdv">
+        <a routerLink="/connexion">Prendre un rendez-vous</a>
+      </span>
+      <mat-form-field appearance="legacy" class="lang">
+        <mat-label>Langues/Languages</mat-label>
+        <mat-select>
+          <mat-option value="fr">Français/French</mat-option>
+          <mat-option value="en">Anglais/English</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-toolbar>
+    <img src="https://wikitrans.co/wp-content/uploads/2020/08/undraw_doctors_hwty.svg" alt="Image de médecins">
+    <button mat-raised-button (click)="navigateTo('/connexion')" id="connexion" color="accent">Connexion</button>
+    <mat-card class="tuto">
+      <mat-card-title>Comment prendre un rendez-vous</mat-card-title>
+      <mat-card-subtitle>(Voir vidéo ci-dessous): </mat-card-subtitle>
+        <video controls width="480">
+          <source src="projetL2U2.mp4" type="video/mp4">
+          <source src="projetL2U2.webm" type="video/webm">
+          <source src="projetL2U2.ogv" type="video/ogv">
+        </video>
+    </mat-card>
+    <mat-card class="container-lf">
+      <mat-card-title>Description du médecin</mat-card-title>
+      <mat-card-content>
+        <p>Diplômée d'Université de Paris Cité</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="container-ctr">
+      <mat-card-title>Information sur le médecin</mat-card-title>
+      <mat-card-content>
+        <p>Dr Mylene Thompson</p>
+        <p>Médecin généraliste</p>
+        <div class="horaire"><p><strong>Horaire</strong>:</p>
+          <ul>
+            <li>Lundi-Dimanche : 9h-12h, 13h-17h</li>
+          </ul></div>
+        <div class="contact"><p><strong>Contact</strong>:</p>
+          <ul>
+            <li>mylene.thompson@gmail.com</li>
+            <li>0643122333</li>
+            <li>45 rue des Saint-Père, 75005 Paris</li>
+          </ul></div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="container-rgt">
+      <mat-card-title>Message de prévention</mat-card-title>
+      <video controls width="480">
+        <source src="projetL2U2.mp4" type="video/mp4">
+        <source src="projetL2U2.webm" type="video/webm">
+        <source src="projetL2U2.ogv" type="video/ogv">
+      </video>
+      <mat-card-content>Nous somme actuellement en pleine pandémie, pour votre santé à tous, veuillez porter le masque recouvrant le nez et la bouche</mat-card-content>
+    </mat-card>
+    <mat-card class="about-us">
+      <mat-card-title>A propos de nous</mat-card-title>
+      <mat-card-content><p>Les développeurs:</p>
+        <ul>
+          <li>Barthez Anton Keesingar</li>
+          <li>Adberraouf Ben Hadj</li>
+          <li>Amir Ben Jamaa</li>
+          <li>Olivia Chen</li>
+          <li>Nabile Hamouchi</li>
+        </ul>
+        <p>Nous contacter : <a href="mailto:contact@etu.u-paris.fr">contact@etu.u-paris.fr</a></p>
+        <p>Notre site Borna est né d'un projet scolaire et à pour objectif donner la possibilité au médecin de consulter leur agenda personnel comme professionnel. Ainsi permettre au patient de pouvoir prendre des rendez-vous auprès de leur médecin général. Cette page web est donc pour l'instant imparfait comme imcomplet, nous, l'équipe, nous nous chargerons d'améliorer du mieux que possible ce site.</p>
+      </mat-card-content>
+    </mat-card>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+.espace { flex: 1 1 auto; }
+
+mat-toolbar {
+  position : relative;
+  border-radius : 5px;
+}
+
+mat-toolbar span {
+  font-size: 1.2em;
+}
+
+img {
+  position: absolute;
+  width: 100%;
+}
+
+body {
+  padding-bottom: 505px;
+  position : absolute;
+  background-color: #ccdcfc;
+  width:100%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.lang {
+  position : relative;
+  right : 20px;
+  font-size: 1em;
+}
+
+mat-label {
+  font-size : 0.8em;
+}
+
+mat-card {
+  position : relative;
+  top : 500px;
+}
+
+#prendre-rdv {
+  position : relative;
+  right : 100px;
+  font-size: 0.99em;
+}
+
+button {
+  position : relative;
+  top : 250px;
+  margin-left: 850px;
+  padding : 7px 15px 7px 15px;
+  font-size: 1.5em;
+}
+
+.tuto {
+  position : relative;
+  top : 255px;
+  margin-left : 150px;
+  margin-right: 1250px;
+  padding-bottom: 60px;
+}
+
+.container-lf {
+  position: absolute;
+  margin-top: 350px;
+  margin-left: 150px;
+  margin-right: 50px;
+  padding-bottom: 180px;
+}
+
+.container-lf mat-card-content {
+  margin-top:15px;
+ }
+
+.container-ctr {
+  position : absolute;
+  margin-left : 1150px;
+  padding-right: 190px;
+  margin-top: 350px;
+  padding-bottom: 28px;
+}
+
+.horaire {
+  display: flex;
+}
+
+.horaire ul {
+  margin-left: 10px;
+  list-style-type: none;
+}
+
+.contact {
+  display: flex;
+}
+
+.contact ul {
+  margin-left: 10px;
+  list-style-type: none;
+}
+
+.container-ctr mat-card-content {
+  margin-left: 5px;
+  margin-top: 10px;
+  padding-bottom: 23px;
+}
+
+.container-rgt {
+  position: absolute;
+  top : 370px;
+  margin-left : 1150px;
+  margin-right: 1550px;
+  
+}
+
+.container-rgt mat-card-content {
+  margin: 20px 0px 0px 5px;
+  font-size: 1.2em;
+}
+
+.about-us {
+  position : absolute;
+  top : 1200px;
+}
+
+.about-us mat-card-content {
+  margin-left: 20px;
+  margin-top : 20px;
+  font-size: 1em;
+}
+
+.about-us mat-card-content ul {
+  margin-bottom: 10px;
+}

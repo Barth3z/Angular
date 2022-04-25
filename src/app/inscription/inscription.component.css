@@ -1,0 +1,109 @@
+mat-toolbar {
+  border-radius: 5px;
+}
+
+* {
+  padding : 0;
+  margin : 0;
+}
+
+body {
+  background-color: #ccdcfc;
+  padding-bottom: 600px;
+  position : absolute;
+  width: 100%;
+}
+
+#borna {
+  font-size: 1.2em;
+  margin-left: 15px;
+}
+
+mat-card {
+  position : relative;
+  top : 40px;
+  border-radius: 5px;
+  margin-top : 90px;
+  margin-left: 500px;
+  margin-right : 500px;
+  padding-right: 50px;
+}
+
+mat-card-subtitle {
+  font-size: 2em;
+  color: black;
+  text-align: center;
+  padding-top: 30px;
+}
+
+
+.nom {
+  margin-left : 130px;
+  padding-top : 50px;
+} 
+
+.prenom {
+  margin-left : 130px;
+}
+
+.age {
+  margin-left : 130px;
+}
+
+.genre {
+  margin-left : 130px;
+  width: 230px;
+}
+
+.mail {
+  margin-left : 130px;
+}
+
+#errMail {
+  color : red;
+  font-size: 0.9em;
+  display : block;
+  margin-left: 140px;
+}
+
+.phone {
+  margin-left : 130px;
+}
+
+#errPhone {
+  color : red;
+  font-size: 0.9em;
+  display : block;
+  margin-left: 140px;
+}
+
+.mdp {
+  margin-left : 130px;
+}
+
+#errMdp {
+  color : red;
+  font-size: 0.9em;
+  display : block;
+  margin-left: 140px;
+}
+
+#errMdpc {
+  color : red;
+  font-size: 0.9em;
+  display : block;
+  margin-left: 140px;
+}
+
+#done {
+  position: relative;
+  top : 20px;
+}
+
+#conditionG {
+  margin-left : 130px;
+}
+
+#notif {
+  margin-left : 130px;
+}

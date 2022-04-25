@@ -1,0 +1,74 @@
+table {
+  width: 100%;
+  margin-top: 25px;
+  background-color: #ccdcfc
+}
+
+th{
+  width: 20%;
+}
+
+.pointer{
+  cursor: pointer;
+  margin: 10px;
+}
+
+#edit{
+  color: blue;
+}
+
+#delete{
+  color: red;
+}
+
+mat-toolbar {
+    border-radius: 5px;
+}
+
+#mon_compte {
+  position: absolute;
+  right: 45px;
+  font-size:2.8em;
+  top:-0.2px;
+}
+
+#borna {
+    font-size: 1.2em;
+    margin-left: 15px;
+}
+
+* {
+  padding:0;
+  margin:0;
+}
+
+body {
+  position : absolute;
+  background-color : #ccdcfc;
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+mat-card {
+  padding-bottom: 35%;
+  padding-top: 50px;
+}
+
+button {
+  position: absolute;
+  left: 230px;
+  top: 95px;
+}
+
+a {
+  margin-left: 1250px;
+}
+
+.instruction {
+  font-size: 1.2em;
+}
+
+.mail {
+  margin-top: 10px;
+}

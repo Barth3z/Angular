@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lan="fr">
+  <head>
+    <title>Inscripton</title>
+    <meta charset="uft-8">
+  </head>
+  <body>
+    <form #inscriptionForm="ngForm" (ngSubmit)="addNewUser(inscriptionForm)">
+    <header><mat-toolbar color="primary">
+        <span id="borna" routerLink="/">Borna</span>
+      </mat-toolbar></header>
+      <p><mat-card>
+        <mat-card-subtitle>Inscription</mat-card-subtitle>
+        <mat-card-content>
+          <p><mat-form-field appearance="outline" class="nom">
+            <mat-icon matPrefix>perm_identity</mat-icon>
+            <mat-label for="nom">Nom</mat-label>
+            <input matInput type="text" id="nom" size="25" name="nom" placeholder="Ex. Dupont" required="" autofocus="" maxlength="30" [(ngModel)]="nom">
+          </mat-form-field></p>
+          <p><mat-form-field appearance="outline" class="prenom">
+            <mat-icon matPrefix>perm_identity</mat-icon>
+            <mat-label for="prenom">Prénom</mat-label>
+            <input matInput type="text" id="prenom" size="25" name="prenom" placeholder="Ex. Jean" required="" maxlength="30" [(ngModel)]="prenom">
+          </mat-form-field></p>
+          <p><mat-form-field appearance="outline" class="genre">
+            <mat-label for="genre">Genre</mat-label>
+            <mat-select name="genre" [(ngModel)]="genre" required="">
+              <mat-icon matPrefix>female</mat-icon>/<mat-icon matPrefix>male</mat-icon>
+              <mat-option value="h">Homme</mat-option>
+              <mat-option value="f">Femme</mat-option>
+            </mat-select>
+          </mat-form-field></p>
+          <p><mat-form-field appearance="outline" class="age" required="">
+            <mat-label for="age">Âge</mat-label>
+            <input matInput type="number" id="age" maxlength="2" size="25" placeholder="Ex. 27" name="age" [(ngModel)]="age">
+          </mat-form-field></p>
+          <p><mat-form-field appearance="outline" class="mail">
+            <mat-icon matPrefix>email</mat-icon>
+            <mat-label for="mail">Email</mat-label>
+            <input matInput type ="email" id="mail" maxlength="30" name="mail" size="25" placeholder="Ex. jean.dupont@gmail.com" required="" [(ngModel)]="mail">
+          </mat-form-field>
+          <span id="errMail" *ngIf="isNotMail"><strong>{{msgErrorMail}}</strong></span></p>
+          <p><mat-form-field appearance="outline" class="phone">
+            <mat-icon matPrefix>phone</mat-icon>
+            <mat-label for="phone">Numéro portable</mat-label>
+            <input matInput type="tel" id="phone" maxlength="10" name="phone" size="25" placeholder="Ex. 0684432321" required="" [(ngModel)]="phone">
+          </mat-form-field>
+          <span id="errPhone" *ngIf="isNotPhone"><strong>{{msgErrorTaillePhone}}</strong></span></p>
+          <p><mat-form-field appearance="outline" class="mdp">
+            <mat-icon matPrefix>key</mat-icon>
+            <mat-label for="mdp">Mot de passe</mat-label>
+            <input matInput type="password" id="mdp" name="mdp" maxlength="16" size="25" required="" [(ngModel)]="mdp">
+          </mat-form-field>
+          <span id="errMdp" *ngIf="notMdp"><strong>{{msgErrorMdp}}</strong></span></p>
+        </mat-card-content>
+        <p><mat-form-field appearance="outline" class="mdp">
+          <mat-icon matPrefix>key</mat-icon>
+          <mat-label for="mdpc">Mot de passe de confirmation</mat-label>
+          <input matInput type ="password" id="mdpc" name="mdpc" maxlength="16" size="25" required="" [(ngModel)]="mdpc">
+        </mat-form-field>
+        <span id="errMdpc" *ngIf="notMdpc"><strong>{{msgErrorMdpc}}</strong></span></p>
+        <p><input type="checkbox" id="conditionG" name="conditionG" checked [(ngModel)]="isChecked">
+          <label for="conditionG">Accepter les conditions générales</label></p>
+        <p><input type="checkbox" id="notif" name="notif">
+          <label for="notif">Accepter d'être notifié</label></p>
+        <p><button mat-fab color="accent" (click)="onClick()" type="submit" aria-label="valider" id="done">
+          <mat-icon>done</mat-icon>
+        </button></p>
+      </mat-card></p>
+    </form>
+  </body>
+</html>

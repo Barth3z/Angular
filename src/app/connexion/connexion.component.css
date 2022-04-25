@@ -1,0 +1,68 @@
+mat-toolbar {
+  border-radius: 5px;
+}
+
+#borna {
+  font-size: 1.2em;
+  margin-left: 15px;
+}
+
+* {
+padding:0;
+margin:0;
+}
+
+body {
+position : absolute;
+background-color : #ccdcfc;
+background-repeat: no-repeat;
+padding-bottom: 500px;
+}
+
+mat-card {
+  position: relative;
+  border-radius: 5px;
+  top : 250px;
+  margin-left: 705px;
+  margin-right : 705px;
+  padding-right: 100px;
+  padding-top: 270px;
+  padding-bottom: 5px;
+}
+
+mat-card-subtitle {
+  position: relative;
+  top:-220px;
+  font-size: 2em;
+  color: black;
+  margin-left: 115px;
+}
+
+img {
+position: absolute;
+top: 80px;
+right: 120px;
+}
+
+.mail {
+top : -110px;
+margin-left: 100px;
+}
+
+.mdp {
+top : -100px;
+margin-left: 100px ;
+}
+
+button {
+top : -80px;
+margin-left:140px;
+padding : 3px 10px 3px 10px;
+}
+
+#sInscrire {
+position : relative;
+top : 200px;
+margin-left: 810px;
+font-size: 1.2em;
+}

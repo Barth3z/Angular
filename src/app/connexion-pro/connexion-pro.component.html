@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "fr">
+    <head>
+        <h1>Connexion</h1>
+        <meta charset = "utf-8">
+    </head>
+
+    <body>
+        <form>
+        <header><mat-toolbar color = "primary">
+          <span id= "borna" routerLink="/">Borna</span>
+        </mat-toolbar></header>
+        <p><mat-card>
+            <img src="https://st2.depositphotos.com/4226061/9064/v/600/depositphotos_90647730-stock-illustration-female-doctor-avatar-icon.jpg" height = 100px  alt="Photo de profil"/>
+            <mat-card-subtitle>Se connecter</mat-card-subtitle>
+            <mat-card-content>
+              <p><mat-form-field appearence = "outline" class = "mail">
+                 <mat-icon matPrefix>perm_identity</mat-icon>
+                 <mat-label for= "mail">Email</mat-label>
+                 <input matInput type = "email" id = "mail" maxlength = "30" name = "mail" size = "25" placeholder= "Ex.Andrew.Wotson@gmail.com" required = "" [(ngModel)]="mail">
+              </mat-form-field></p>
+            <p><mat-form-field appearence = "outline" class = "mdp">
+                <mat-icon matPrefix>key</mat-icon>
+                <mat-label for = "mdp">Mot de passe</mat-label>
+                <input matInput type = "password" id = "mdp" name = "mdp" maxlength = "16" size = "25" placeholder="Votre mot de passe" required = "" [(ngModel)]="mdp">
+            </mat-form-field></p>
+            </mat-card-content>
+            <button mat-raised-button color="accent" (click)="onClick()">Se connecter</button>
+        </mat-card></p>
+      </form>
+    </body>
+</html>
